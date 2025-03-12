@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Language Learning Platform</h1>
+  <nav>
+    <ul>
+      <li><a href="#lessons">Lessons</a></li>
+      <li><a href="#progress">My Progress</a></li>
+      <li><a href="#practice">Practice</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="lessons">
+    <h2>Lessons</h2>
+    <div class="grid-container">
+      <div class="card">
+        <h3>Basic Greetings</h3>
+        <p>Learn how to greet people in different situations.</p>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/FU684aR1iZ0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="card">
+        <h3>Ordering Food</h3>
+        <p>How to order food in a restaurant or café.</p>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/KTkXjkz18bw" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="card">
+        <h3>Travel Phrases</h3>
+        <p>Essential phrases for travel and transportation.</p>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/j59nxoSLr4U" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="progress">
+    <h2>My Progress</h2>
+    <div class="progress-container">
+      <label>Listening</label>
+      <progress value="70" max="100"></progress>
+      <label>Speaking</label>
+      <progress value="50" max="100"></progress>
+      <label>Reading</label>
+      <progress value="80" max="100"></progress>
+      <label>Writing</label>
+      <progress value="60" max="100"></progress>
+    </div>
+  </section>
+  <section id="practice">
+    <h2>Practice</h2>
+    <p>Interactive exercises and chatbot conversations.</p>
+    <div class="quiz">
+      <h3>Test 1: Greetings</h3>
+      <p>How do you say "Hello" in French?</p>
+      <button onclick="alert('Correct!')">Bonjour</button>
+      <button onclick="alert('Try again!')">Hola</button>
+      <button onclick="alert('Try again!')">Ciao</button>
+    </div>
+    <div class="quiz">
+      <h3>Test 2: Ordering Food</h3>
+      <p>Which phrase means "I would like a coffee"?</p>
+      <button onclick="alert('Correct!')">Je voudrais un café</button>
+      <button onclick="alert('Try again!')">Ich möchte einen Kaffee</button>
+      <button onclick="alert('Try again!')">Yo quiero un café</button>
+    </div>
+  </section>
+</main>
+</body>
+</html>
