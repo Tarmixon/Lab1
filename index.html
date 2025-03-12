@@ -30,15 +30,16 @@
       <div class="card">
         <h3>Ordering Food</h3>
         <p>How to order food in a restaurant or café.</p>
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/KTkXjkz18bw" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your_video_id2" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="card">
         <h3>Travel Phrases</h3>
         <p>Essential phrases for travel and transportation.</p>
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/j59nxoSLr4U" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/your_video_id3" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </section>
+  <hr class="section-divider">
   <section id="progress">
     <h2>My Progress</h2>
     <div class="progress-container">
@@ -52,6 +53,7 @@
       <progress value="60" max="100"></progress>
     </div>
   </section>
+  <hr class="section-divider">
   <section id="practice">
     <h2>Practice</h2>
     <p>Interactive exercises and chatbot conversations.</p>
@@ -69,7 +71,37 @@
       <button onclick="alert('Try again!')">Ich möchte einen Kaffee</button>
       <button onclick="alert('Try again!')">Yo quiero un café</button>
     </div>
+    <div class="quiz">
+      <h3>Test 3: Multiple Choice</h3>
+      <p>Which of the following are ways to say "Goodbye"?</p>
+      <input type="checkbox" id="bye1"> <label for="bye1">Adieu</label><br>
+      <input type="checkbox" id="bye2"> <label for="bye2">Auf Wiedersehen</label><br>
+      <input type="checkbox" id="bye3"> <label for="bye3">Bonjour</label><br>
+      <button onclick="checkAnswers()">Submit</button>
+    </div>
+    <div class="chatbox">
+      <h3>Chat with our Bot</h3>
+      <div class="chat-window" id="chat-window"></div>
+      <input type="text" id="chat-input" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
   </section>
 </main>
+<script>
+  function checkAnswers() {
+    let correct = document.getElementById("bye1").checked && document.getElementById("bye2").checked && !document.getElementById("bye3").checked;
+    alert(correct ? "Correct!" : "Try again!");
+  }
+
+  function sendMessage() {
+    let input = document.getElementById("chat-input").value;
+    let chatWindow = document.getElementById("chat-window");
+    if (input.trim() !== "") {
+      chatWindow.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+      chatWindow.innerHTML += `<p><strong>Bot:</strong> I'm still learning! 😊</p>`;
+      document.getElementById("chat-input").value = "";
+    }
+  }
+</script>
 </body>
 </html>
